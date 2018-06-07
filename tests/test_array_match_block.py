@@ -12,7 +12,7 @@ class TestMatrixCompare(NIOBlockTestCase):
         self.configure_block(blk, {})
         blk.start()
         test_signal = {
-            'batch': [0, 0, 0, 0],
+            'prediction': [0, 0, 0, 0],
             'labels': [0, 1, 2, 3],
         }
         blk.process_signals([Signal(test_signal)])

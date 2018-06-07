@@ -7,7 +7,7 @@ from nio.properties import Property, PropertyHolder, VersionProperty
 class ArrayMatch(EnrichSignals, Block):
 
     array_a = Property(title='Array A', default='{{ $labels }}')
-    array_b = Property(title='Array B', default='{{ $batch }}')
+    array_b = Property(title='Array B', default='{{ $prediction }}')
     result_field = Property(title='Comparison Result Field', default='match')
     version = VersionProperty('0.1.0')
 
