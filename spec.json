@@ -1,0 +1,47 @@
+{
+  "nio/ArrayMatch": {
+    "version": "0.1.0",
+    "description": "Compare two array-like objects for equality, returning the ratio of elements that are exactly equal in both arrays. When comparing nested arrays, the inner-most subarrays are compared first so that the returned ratio reflects the number of subarrays that are equal across all elements. For example:\n| array_a                           | array_b                           | result |\n|-----------------------------------|-----------------------------------|--------|\n| [x, x, x]                         | [y, y, y]                         | 0      |\n| [x, x, x]                         | [x, y, y]                         | 0.33   |\n| [[x, x, x], [x, x, x], [x, x, x]] | [[x, x, x], [x, x, x], [x, x, y]] | 0.66   |",
+    "categories": [],
+    "properties": {
+      "array_a": {
+        "title": "Array A",
+        "type": "Type",
+        "description": "Any array-like object or nested sequence.",
+        "default": "{{ $labels }}"
+      },
+      "array_b": {
+        "title": "Array B",
+        "type": "Type",
+        "description": "Any array-like object or nested sequence.",
+        "default": "{{ $batch }}"
+      },
+      "enrich": {
+        "title": "Signal Enrichment",
+        "type": "ObjectType",
+        "description": "Signal Enrichment\n  - *exclude_existing*: If checked (true), the attributes of the incoming signal will be excluded from the outgoing signal. If unchecked (false), the attributes of the incoming signal will be included in the outgoing signal.\n  - *enrich_field*: (hidden) The attribute on the signal to store the results from this block. If this is empty, the results will be merged onto the incoming signal. This is the default operation. Having this field allows a block to 'save' the results of an operation to a single field on an incoming signal and notify the enriched signal.",
+        "default": {
+          "enrich_field": "",
+          "exclude_existing": true
+        }
+      },
+      "result_field": {
+        "title": "Comparison Result Field",
+        "type": "Type",
+        "description": "Outgoing signal attribute in which to store the result.",
+        "default": "match"
+      }
+    },
+    "inputs": {
+      "default": {
+        "description": "Any list of signals."
+      }
+    },
+    "outputs": {
+      "default": {
+        "description": "A list of signals of equal length to input.\n  - `result_field` (float) The ratio of elements (or subarrays) that are an exact match between `array_a` and `array_b`."
+      }
+    },
+    "commands": {}
+  }
+}

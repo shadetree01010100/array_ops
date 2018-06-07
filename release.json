@@ -1,0 +1,7 @@
+{
+  "nio/ArrayMatch": {
+    "language": "Python",
+    "url": "git://github.com/tyoungNIO/array_ops.git",
+    "version": "0.1.0"
+  }
+}
