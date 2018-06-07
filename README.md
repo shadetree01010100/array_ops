@@ -3,7 +3,7 @@ ArrayMatch
 Compare two array-like objects for equality, returning the ratio of elements that are exactly equal in both arrays. When comparing nested arrays, the inner-most subarrays are compared first so that the returned ratio reflects the number of subarrays that are equal across all elements. For example:
 
 | array_a                           | array_b                           | result |
-|-----------------------------------|-----------------------------------|--------|
+|:----------------------------------|:----------------------------------|:-------|
 | [x, x, x]                         | [y, y, y]                         | 0      |
 | [x, x, x]                         | [x, y, y]                         | 0.33   |
 | [[x, x, x], [x, x, x], [x, x, x]] | [[x, x, x], [x, x, x], [x, x, y]] | 0.66   |
