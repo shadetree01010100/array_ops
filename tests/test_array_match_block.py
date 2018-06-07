@@ -41,13 +41,13 @@ class TestMatrixCompare(NIOBlockTestCase):
                 [0, 0],
                 [0, 0],
                 [0, 0],
-                [0, 0]
+                [0, 0],
             ],
             'bar': [
-                [0, 3.14],
+                [-1, 1],
                 [0, 0],
                 [0, 0],
-                [0, 0]
+                [0, 0],
             ],
         }
         blk.process_signals([Signal(test_signal)])
