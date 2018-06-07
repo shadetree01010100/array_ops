@@ -39,7 +39,7 @@
     },
     "outputs": {
       "default": {
-        "description": "A list of signals of equal length to input.\n  - `result_field` (float) The ratio of elements (or subarrays) that are an exact match between `array_a` and `array_b`."
+        "description": "A list of signals of equal length to input.\n  - `result_field`: (float) The ratio of elements (or subarrays) that are an exact match between `array_a` and `array_b`."
       }
     },
     "commands": {}

@@ -24,7 +24,7 @@ Inputs
 Outputs
 -------
 - **default**: A list of signals of equal length to input.
-  - `result_field` (float) The ratio of elements (or subarrays) that are an exact match between `array_a` and `array_b`.
+  - `result_field`: (float) The ratio of elements (or subarrays) that are an exact match between `array_a` and `array_b`.
 
 Commands
 --------
