@@ -1,7 +1,7 @@
 {
   "nio/ArrayMatch": {
     "version": "0.1.0",
-    "description": "Compare two array-like objects for equality, returning the ratio of elements that are exactly equal in both arrays. When comparing nested arrays, the inner-most subarrays are compared first so that the returned ratio reflects the number of subarrays that are equal across all elements. For example:\n| array_a                           | array_b                           | result |\n|-----------------------------------|-----------------------------------|--------|\n| [x, x, x]                         | [y, y, y]                         | 0      |\n| [x, x, x]                         | [x, y, y]                         | 0.33   |\n| [[x, x, x], [x, x, x], [x, x, x]] | [[x, x, x], [x, x, x], [x, x, y]] | 0.66   |",
+    "description": "Compare two array-like objects for equality, returning the ratio of elements that are exactly equal in both arrays. When comparing nested arrays, the inner-most subarrays are compared first so that the returned ratio reflects the number of subarrays that are equal across all elements. For example:\n\n| array_a                           | array_b                           | result |\n|-----------------------------------|-----------------------------------|--------|\n| [x, x, x]                         | [y, y, y]                         | 0      |\n| [x, x, x]                         | [x, y, y]                         | 0.33   |\n| [[x, x, x], [x, x, x], [x, x, x]] | [[x, x, x], [x, x, x], [x, x, y]] | 0.66   |",
     "categories": [],
     "properties": {
       "array_a": {
