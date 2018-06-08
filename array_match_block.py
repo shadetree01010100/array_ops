@@ -21,11 +21,8 @@ class ArrayMatch(EnrichSignals, Block):
             diff = A - B
             if len(diff.shape) > 1:
                 # matching subarrays sum to 0
-                sub_diff = np.sum(np.abs(diff), axis=-1)
-                C = np.mean(sub_diff == 0)
-            else:
-                # percent of elements that are equal
-                C = np.mean(diff == 0)
+                diff = np.sum(np.abs(diff), axis=-1)
+            C = np.mean(diff == 0)
             new_dict = {self.result_field(signal): C}
             new_signal = self.get_output_signal(new_dict, signal)
             outgoing_signals.append(new_signal)
