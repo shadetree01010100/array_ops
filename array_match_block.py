@@ -14,7 +14,6 @@ class ArrayMatch(EnrichSignals, Block):
     def process_signals(self, signals):
         outgoing_signals = []
         for signal in signals:
-            lst = []
             # cast to array to accept array-like objects for input
             A = np.array(self.array_a(signal))
             B = np.array(self.array_b(signal))
