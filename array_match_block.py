@@ -20,8 +20,9 @@ class ArrayMatch(EnrichSignals, Block):
             B = np.array(self.array_b(signal))
             diff = A - B
             if len(diff.shape) > 1:
-                # percent of subarrays with all elements equal
-                C = np.mean(np.sum(np.abs(diff), axis=-1) == 0)
+                # matching subarrays sum to 0
+                sub_diff = np.sum(np.abs(diff), axis=-1)
+                C = np.mean(sub_diff == 0)
             else:
                 # percent of elements that are equal
                 C = np.mean(diff == 0)
