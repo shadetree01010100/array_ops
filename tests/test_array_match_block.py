@@ -42,9 +42,11 @@ class TestMatrixCompare(NIOBlockTestCase):
                 [0, 0],
                 [0, 0],
                 [0, 0],
+                [0, 0],
             ],
             'bar': [
                 [-1, 1],
+                [3.14, 0],
                 [0, 0],
                 [0, 0],
                 [0, 0],
@@ -57,5 +59,5 @@ class TestMatrixCompare(NIOBlockTestCase):
         # convert result array to list to do dict comparison
         last_signal['baz'] = last_signal['baz'].tolist()
         # three of four subarrays are equal across all elements
-        target_signal = {'baz': 0.75, **test_signal}
+        target_signal = {'baz': 0.6, **test_signal}
         self.assertDictEqual(last_signal, target_signal)
